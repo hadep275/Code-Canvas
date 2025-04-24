@@ -52,6 +52,46 @@ window.onload = () => {
   });
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Open modal logic
+  const modalButtons = document.querySelectorAll(".modal-btn");
+  const modals = document.querySelectorAll(".modal");
+  const closeButtons = document.querySelectorAll(".close");
+
+  modalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const targetId = button.getAttribute("data-target");
+      const modal = document.getElementById(targetId);
+      if (modal) {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden"; // prevent background scroll
+      }
+    });
+  });
+
+  // Close modal when clicking the close button
+  closeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const modal = button.closest(".modal");
+      if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  });
+
+  // Close modal when clicking outside modal content
+  window.addEventListener("click", (event) => {
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  });
+});
+
+
 // Modal logic
 const modalData = [
   {
