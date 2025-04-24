@@ -1,250 +1,139 @@
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code & Canvas | Web Development & Design</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-/* Global Styles */
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #121212;
-  color: #fff;
-  line-height: 1.6;
-}
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1 class="typing-effect">Building the Web, One Line at a Time</h1>
+    <p>Your go-to solution for modern web development, UI/UX design, and mobile app creation.</p>
+    <a href="#projects" class="cta-btn">See My Work</a>
+  </section>
 
-header {
-  position: sticky;
-  top: 0;
-  background-color: #1f1f1f;
-  padding: 1rem;
-  z-index: 1000;
-}
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <div class="skills-list">
+      <div class="skill">
+        <img src="assets/html.svg" alt="HTML">
+        <h3>HTML</h3>
+      </div>
+      <div class="skill">
+        <img src="assets/css.svg" alt="CSS">
+        <h3>CSS</h3>
+      </div>
+      <div class="skill">
+        <img src="assets/js.svg" alt="JavaScript">
+        <h3>JavaScript</h3>
+      </div>
+      <div class="skill">
+        <img src="assets/react.svg" alt="React">
+        <h3>React</h3>
+      </div>
+      <div class="skill">
+        <img src="assets/stripe.svg" alt="Stripe">
+        <h3>Stripe</h3>
+      </div>
+    </div>
+  </section>
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <img src="assets/ecommerce-screenshot.jpg" alt="E-commerce Store">
+        <h3>E-commerce Store</h3>
+        <p>Integrated with Stripe for seamless payments.</p>
+        <button class="modal-btn" data-target="project1">View Project</button>
+      </div>
+      <div class="project-card">
+        <img src="assets/blog-screenshot.jpg" alt="Blog Site">
+        <h3>Blog Site</h3>
+        <p>Custom CMS for easy content management.</p>
+        <button class="modal-btn" data-target="project2">View Project</button>
+      </div>
+      <div class="project-card">
+        <img src="assets/responsive-screenshot.jpg" alt="Responsive Web App">
+        <h3>Responsive Web App</h3>
+        <p>Fully responsive, mobile-first design.</p>
+        <button class="modal-btn" data-target="project3">View Project</button>
+      </div>
+    </div>
+  </section>
 
-nav ul li {
-  margin: 0 15px;
-}
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>What My Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"Amazing work! Delivered exactly what I needed."</p>
+        <p>- Placeholder Client</p>
+      </div>
+      <div class="testimonial-card">
+        <p>"Highly recommended, very professional."</p>
+        <p>- Placeholder Client</p>
+      </div>
+    </div>
+  </section>
 
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <form action="https://formspree.io/f/mwkaeqyq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #ff7f50, #ff6347);
-  text-align: center;
-  padding: 3rem;
-}
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Code & Canvas | All Rights Reserved</p>
+  </footer>
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #fff;
-}
+  <!-- Modals (Hidden by default) -->
+  <div id="project1" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Project Details - E-commerce Store</h3>
+      <p>Detailed description of the project...</p>
+    </div>
+  </div>
 
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  color: #fff;
-}
+  <div id="project2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Project Details - Blog Site</h3>
+      <p>Detailed description of the project...</p>
+    </div>
+  </div>
 
-.cta-btn {
-  padding: 10px 30px;
-  background-color: #fff;
-  color: #333;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-}
+  <div id="project3" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Project Details - Responsive Web App</h3>
+      <p>Detailed description of the project...</p>
+    </div>
+  </div>
 
-.cta-btn:hover {
-  background-color: #ff6347;
-  color: #fff;
-}
-
-/* Skills Section */
-.skills {
-  background-color: #1a1a1a;
-  padding: 2rem;
-  text-align: center;
-}
-
-.skills h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.skills-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.skill {
-  margin: 1rem;
-  text-align: center;
-}
-
-.skill img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
-}
-
-.skill h3 {
-  font-size: 1.25rem;
-  color: #fff;
-}
-
-/* Projects Section */
-.projects {
-  padding: 3rem;
-  background-color: #333;
-  text-align: center;
-}
-
-.projects h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.project-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.project-card {
-  background-color: #444;
-  margin: 1rem;
-  padding: 1rem;
-  width: 250px;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.project-card h3 {
-  margin-top: 1rem;
-  color: #fff;
-}
-
-.project-card button {
-  margin-top: 1rem;
-  padding: 10px 20px;
-  background-color: #ff6347;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.project-card button:hover {
-  background-color: #ff7f50;
-}
-
-/* Testimonials Section */
-.testimonials {
-  background-color: #222;
-  padding: 3rem;
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.testimonial-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.testimonial-card {
-  background-color: #444;
-  margin: 1rem;
-  padding: 1.5rem;
-  width: 300px;
-  border-radius: 10px;
-}
-
-.testimonial-card p {
-  font-size: 1.1rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-/* Contact Section */
-.contact {
-  padding: 3rem;
-  background-color: #333;
-  text-align: center;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact input,
-.contact textarea {
-  width: 80%;
-  padding: 0.75rem;
-  margin: 0.5rem 0;
-  border: 1px solid #555;
-  border-radius: 5px;
-  color: #fff;
-  background-color: #222;
-}
-
-.contact button {
-  padding: 1rem 2rem;
-  background-color: #ff6347;
-  color: #fff;
-  border: none;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.contact button:hover {
-  background-color: #ff7f50;
-}
-
-/* Footer Section */
-footer {
-  background-color: #1f1f1f;
-  padding: 1rem;
-  text-align: center;
-  color: #fff;
-}
-
+</body>
+</html>
