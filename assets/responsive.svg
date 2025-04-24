@@ -1,0 +1,13 @@
+
+---
+
+### 📦 `assets/responsive.svg`
+```svg
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#00B0FF" d="M32 0H96c7.7 0 14 6.3 14 14v100c0 7.7-6.3 14-14 14H32c-7.7 0-14-6.3-14-14V14c0-7.7 6.3-14 14-14z"/>
+  <path fill="#fff" d="M104 10H24c-1.1 0-2 .9-2 2v100c0 1.1.9 2 2 2h80c1.1 0 2-.9 2-2V12c0-1.1-.9-2-2-2zm-2 100H26V16h76v94z"/>
+  <rect fill="#00B0FF" x="33" y="38" width="62" height="9"/>
+  <rect fill="#00B0FF" x="33" y="56" width="62" height="9"/>
+  <rect fill="#00B0FF" x="33" y="74" width="62" height="9"/>
+  <rect fill="#00B0FF" x="33" y="92" width="62" height="9"/>
+</svg>
